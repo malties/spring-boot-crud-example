@@ -12,24 +12,20 @@ public class StudentService {
     @Autowired
     private StudentRepository repository;
 
-    public Student saveProduct(Student product) {
-        return repository.save(product);
+    public Student saveStudent(Student student) {
+        return repository.save(student);
     }
 
-    public List<Student> saveProducts(List<Student> products) {
-        return repository.saveAll(products);
+    public List<Student> saveStudents(List<Student> students) {
+        return repository.saveAll(students);
     }
 
-    public List<Student> getProducts() {
+    public List<Student> getStudents() {
         return repository.findAll();
     }
 
-    public Student getProductById(int id) {
-        return repository.findById(id).orElse(null);
-    }
-
-    public Student getProductByName(String name) {
-        return repository.findByName(name);
+    public Student getStudentByLastName(String lastName) {
+        return repository.findByLastName(lastName);
     }
 
     public String deleteProduct(int id) {
@@ -37,13 +33,13 @@ public class StudentService {
         return "product removed !! " + id;
     }
 
-    public Student updateProduct(Student product) {
+   /*  public Student updateProduct(Student product) {
         Student existingProduct = repository.findById(product.getId()).orElse(null);
         existingProduct.setName(product.getName());
         existingProduct.setQuantity(product.getQuantity());
         existingProduct.setPrice(product.getPrice());
         return repository.save(existingProduct);
     }
-
+ */
 
 }

@@ -13,36 +13,36 @@ public class StudentController {
     @Autowired
     private StudentService service;
 
-    @PostMapping("/addProduct")
-    public Student addProduct(@RequestBody Student product) {
-        return service.saveProduct(product);
+    @PostMapping("/addStudent")
+    public Student addStudent(@RequestBody Student student) {
+        return service.saveStudent(student);
     }
 
-    @PostMapping("/addProducts")
-    public List<Student> addProducts(@RequestBody List<Student> products) {
-        return service.saveProducts(products);
+    @PostMapping("/addStudents")
+    public List<Student> addStudents(@RequestBody List<Student> students) {
+        return service.saveStudents(students);
     }
 
-    @GetMapping("/products")
-    public List<Student> findAllProducts() {
-        return service.getProducts();
+    @GetMapping("/students")
+    public List<Student> findAllStudents() {
+        return service.getStudents();
     }
 
-    @GetMapping("/productById/{id}")
-    public Student findProductById(@PathVariable int id) {
-        return service.getProductById(id);
+    @GetMapping("/studentByLastName/{lastName}")
+    public Student findStudentByLastName(@PathVariable String lastName) {
+        return service.getStudentByLastName(lastName);
     }
 
-    @GetMapping("/product/{name}")
+/*     @GetMapping("/product/{first_name}")
     public Student findProductByName(@PathVariable String name) {
         return service.getProductByName(name);
-    }
+    } */
 
-    @PutMapping("/update")
+/*     @PutMapping("/update")
     public Student updateProduct(@RequestBody Student product) {
         return service.updateProduct(product);
     }
-
+ */
     @DeleteMapping("/delete/{id}")
     public String deleteProduct(@PathVariable int id) {
         return service.deleteProduct(id);

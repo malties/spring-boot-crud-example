@@ -13,13 +13,13 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "PRODUCT_TBL")
+@Table(name = "student")
 public class Student {
 
     @Id
     @GeneratedValue
-    private int id;
-    private String name;
-    private int quantity;
-    private double price;
+    private int age;
+    private String firstName;
+    private String lastName;
+    private String subject; //change to list later
 }
