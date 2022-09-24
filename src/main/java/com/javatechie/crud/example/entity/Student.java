@@ -22,5 +22,5 @@ public class Student {
     private int age;
     private String firstName;
     private String lastName;
-    private String subject; //change to list later
+    private String subject; //would be better as a list, but needs its own table
 }

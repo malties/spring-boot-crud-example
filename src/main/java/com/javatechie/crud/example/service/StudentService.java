@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//No error handling which is a big yikes 
+
 @Service
 public class StudentService {
     @Autowired

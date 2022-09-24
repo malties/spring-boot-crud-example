@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//Dont think API mapping here follows convention
+
 @RestController
 public class StudentController {
 
