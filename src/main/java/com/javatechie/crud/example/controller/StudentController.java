@@ -33,18 +33,18 @@ public class StudentController {
         return service.getStudentByLastName(lastName);
     }
 
-/*     @GetMapping("/product/{first_name}")
-    public Student findProductByName(@PathVariable String name) {
-        return service.getProductByName(name);
-    } */
-
-/*     @PutMapping("/update")
-    public Student updateProduct(@RequestBody Student product) {
-        return service.updateProduct(product);
+    @GetMapping("/student/{id}")
+    public Student findStudentById(@PathVariable int id) {
+        return service.getStudentById(id);
     }
- */
+
+    @PutMapping("/update")
+    public Student updateStudent(@RequestBody Student student) {
+        return service.updateStudent(student);
+    }
+
     @DeleteMapping("/delete/{id}")
-    public String deleteProduct(@PathVariable int id) {
-        return service.deleteProduct(id);
+    public String deleteStudent(@PathVariable int id) {
+        return service.deleteStudent(id);
     }
 }

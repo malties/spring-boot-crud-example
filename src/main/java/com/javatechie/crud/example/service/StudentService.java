@@ -28,18 +28,23 @@ public class StudentService {
         return repository.findByLastName(lastName);
     }
 
-    public String deleteProduct(int id) {
-        repository.deleteById(id);
-        return "product removed !! " + id;
+    public Student getStudentById(int id){
+        return repository.findById(id);
     }
 
-   /*  public Student updateProduct(Student product) {
-        Student existingProduct = repository.findById(product.getId()).orElse(null);
-        existingProduct.setName(product.getName());
-        existingProduct.setQuantity(product.getQuantity());
-        existingProduct.setPrice(product.getPrice());
-        return repository.save(existingProduct);
+    public String deleteStudent(int id) {
+        repository.deleteById(id);
+        return "student" + id +" removed! " ;
     }
- */
+
+     public Student updateStudent(Student student) {
+        Student existingStudent = repository.findById(student.getId());
+        existingStudent.setFirstName(student.getFirstName());
+        existingStudent.setLastName(student.getFirstName());
+        existingStudent.setAge(student.getAge());
+        existingStudent.setSubject(student.getSubject());
+        return repository.save(existingStudent);
+    }
+ 
 
 }
