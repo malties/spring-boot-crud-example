@@ -36,7 +36,7 @@ public class StudentService {
 
     public String deleteStudent(int id) {
         repository.deleteById(id);
-        return "student" + id +" removed! " ;
+        return "student" + id +" removed! " ; //Strings should be abstracted out to some kind of string class 
     }
 
      public Student updateStudent(Student student) {
